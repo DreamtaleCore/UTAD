@@ -13,11 +13,17 @@ We propose an Unsupervised Two-stage Anomaly Detection (UTAD) for anomaly detect
 
 **Picture:**  *Many one-stage methods reconstruct the structure of the input but without details (A) or high-fidelity reconstruction yet draw in anomaly regions (B). (c) We tackle the contradiction by extracting the anomaly-free structure (m) and adding high-fidelity details in two stages*
 
-<div align=center>  <img src="figures/main.png" alt="Teaser" width="800" align="bottom" /> </div>
+<div align=center>  <img src="figures/overview.gif" alt="Teaser" width="800" align="bottom" /> </div>
 
 **Picture:**  *Overview of the proposed method.*
 
 ## Testing code
 
+Testing  code are released！
+
+### Playing with pretrained model
+
 Coming soon.
+
+
 
