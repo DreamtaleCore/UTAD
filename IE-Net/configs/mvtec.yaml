@@ -1,0 +1,41 @@
+input_directory: dataset/AnomalyDetec/mvtec_anomaly_detection/capsule/train    # dataset folder location
+
+
+exp_name:      ZAD_hazelnut
+architecture:  mvtecCAE
+color_mode:    rgb
+loss:          l2
+batch_size:    128
+input_size:    256
+workers:       8
+
+image_gan:
+  type:        lsgan
+  num_scales:  3
+
+ae_lr:         0.001
+d_img_lr:      0.0001
+d_feat_lr:     0.0001
+cos:           0
+schedule:      !!python/tuple [200, 350]    # learning rate schedule (when to drop lr by 10x)
+
+warmup_epochs:   2
+num_epochs:      400
+
+ae_momentum:     0.9
+ae_weight_decay: 0.0001
+
+weight_recon:      100.
+weight_tv:         0.00
+weight_gan_img:    0.1
+weight_gan_feat_l: 1.5
+weight_gan_feat_g: 0.5
+weight_prior_kl:   0.1
+
+weight_dis_local:  1.5
+weight_dis_global: 0.5
+
+
+image_save_iter: 100          # How often do you want to save output images during training
+log_iter: 1                   # How often do you want to log the training stats
+model_save_iter: 5            # How often do you want to save the model
